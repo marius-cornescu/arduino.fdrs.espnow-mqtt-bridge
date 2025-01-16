@@ -22,7 +22,7 @@
 
 */
 //= DEFINES ========================================================================================
-#define DEBUG
+//#define DEBUG
 
 #if defined(ESP8266)
 // interrupt handler and related code must be in RAM on ESP8266, according to issue #46.
