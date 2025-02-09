@@ -5,7 +5,7 @@
 //  Developed by Timm Bogner (timmbogner@gmail.com) in Urbana, Illinois, USA.
 //
 /*
-  IDE board = "ESP32S2 Dev Module"
+  IDE board = "ESP32 Dev Module"
 
   PIN CONNECTIONS
   -------------------------------
@@ -38,8 +38,8 @@
 void setup() {
 #ifdef DEBUG
   // Open serial communications and wait for port to open:
-  // Serial.begin(115200);
-  // while (!Serial) { ; }
+  Serial.begin(115200);
+  while (!Serial) { ; }
 #endif
   debugPrintln(F("ESP-Now:Gateway:START-UP >>>>>>>>>>>>>>>"));
   //..............................

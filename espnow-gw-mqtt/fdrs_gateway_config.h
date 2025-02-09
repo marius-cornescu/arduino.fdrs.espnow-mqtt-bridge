@@ -1,6 +1,6 @@
 //  FARM DATA RELAY SYSTEM
 //
-//  GATEWAY CONFIGURATION
+//  GATEWAY CONFIGURATION - MQTT Gateway
 
 //Addresses
 #define UNIT_MAC           0x00  // The address of this gateway
@@ -11,22 +11,22 @@
 // #define LORA_NEIGHBOR_2    0x00  // Address of LoRa neighbor #2
 
 // Interfaces
-//#define USE_ESPNOW  
+//#define USE_ESPNOW
 //#define USE_LORA
 #define USE_WIFI  // Will cause errors if used with ESP-NOW. Use a serial link instead!
 //#define USE_ETHERNET
 
 // Routing
 // Options: sendESPNowNbr(1 or 2); sendESPNowPeers(); sendLoRaNbr(1 or 2); broadcastLoRa(); sendSerial(); sendMQTT();
-#define ESPNOWG_ACT    
-#define LORAG_ACT      
+#define ESPNOWG_ACT
+//#define LORAG_ACT
 #define SERIAL_ACT     sendMQTT();
-#define MQTT_ACT       sendSerial();   
+#define MQTT_ACT       sendSerial();
 #define INTERNAL_ACT   sendMQTT();
-#define ESPNOW1_ACT   
-#define ESPNOW2_ACT                    
-#define LORA1_ACT      
-#define LORA2_ACT 
+#define ESPNOW1_ACT    
+#define ESPNOW2_ACT    
+// #define LORA1_ACT
+// #define LORA2_ACT
 
 // LoRa Configuration
 //#define RADIOLIB_MODULE SX1276
@@ -60,20 +60,20 @@
 //#define USE_LR  // Use ESP-NOW LR mode (ESP32 only)
 
 // WiFi and MQTT Credentials  -- These will override the global settings
-//#define WIFI_SSID   "Your SSID"  
+//#define WIFI_SSID   "Your SSID"
 #define WIFI_PASS   WIFI_PASSWORD
 
 // Use Static IP Address for WiFi connections
-// #define USE_STATIC_IPADDRESS     
+// #define USE_STATIC_IPADDRESS
 // #define HOST_IPADDRESS      "192.168.0.100"
 // #define GW_IPADDRESS        "192.168.0.1"
 // #define SUBNET_ADDRESS      "255.255.255.0"
-// #define DNS1_IPADDRESS      "192.168.0.1"    
-// #define DNS2_IPADDRESS      "192.168.0.2"    
+// #define DNS1_IPADDRESS      "192.168.0.1"
+// #define DNS2_IPADDRESS      "192.168.0.2"
 
 #define MQTT_ADDR   MQTT_BROKER_ADDRESS
 #define MQTT_PORT   1883 // Default MQTT port is 1883
-#define MQTT_AUTH   //Enable MQTT authentication 
+#define MQTT_AUTH   //Enable MQTT authentication
 #define MQTT_USER   MQTT_USERNAME
 #define MQTT_PASS   MQTT_PASSWORD
 

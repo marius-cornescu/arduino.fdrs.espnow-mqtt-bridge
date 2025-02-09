@@ -27,7 +27,7 @@
 // NTP Time settings for gateways
 #define DST_RULE        EUDST // Daylight saving time rules: Use USDST for United States DST rules, EUDST for European Union
 #define TIME_SERVER       "0.us.pool.ntp.org"       // NTP time server to use. If FQDN at least one DNS server is required to resolve name
-#define STD_OFFSET      (-1)                // Local standard time offset in hours from UTC - if unsure, check https://time.is
+#define STD_OFFSET      (+1)                // Local standard time offset in hours from UTC - if unsure, check https://time.is
 #define DST_OFFSET      (STD_OFFSET + 1)    // Local savings time offset in hours from UTC - if unsure, check https://time.is
 #define TIME_FETCHNTP     60      // Time, in minutes, between fetching time from NTP server
 #define TIME_PRINTTIME    15     // Time, in minutes, between printing local time to debug
